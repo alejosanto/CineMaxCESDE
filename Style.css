@@ -1,0 +1,379 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Estilos generales de títulos y textos principales */
+h1{
+    color: #c4a90d; /* h1 */
+    font-size: 50px;
+    text-align: center;
+    margin-top: 20px;
+}
+p{
+    color: #c4a90d;
+    font-size: 18px;
+    text-align: center;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+/* Logo principal de CineMax */
+.encabezadoLogo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 25px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.logo-cinemax{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.textoEncabezado{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textoEncabezado h1{
+    margin: 0;
+}
+
+.textoEncabezado p{
+    margin-top: 10px;
+}
+
+
+/* Fondo principal del sitio */
+body{
+    background-color: black;
+   
+}
+
+/* Estilo general de las secciones */
+section{
+    color: #c4a90d;
+    font-size: 20px;
+    margin: 20px auto;
+    width: 80%;
+    background-color: #1a1a1a;
+    padding: 20px;
+    text-align: center;
+}
+h2{
+    color: #c4a90d;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+ul{
+   display: inline-block;
+   text-align: center;
+    margin: 0;
+    padding: 0;
+
+}
+li{
+    color: #c4a90d;
+    font-size: 18px;
+    list-style-type: none; 
+    font-weight: bold;
+}
+
+
+/* Sección de películas destacadas */
+.peliculas{
+    background-color: #343232;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Formulario de compra de entradas  */
+.compraEntradas{
+    background-color: rgba(26, 26, 26, 0.9);
+    padding: 25px;
+    border-bottom: 2px solid #FFD700;
+    border-radius: 8px;
+}
+
+.compraEntradas h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.compraEntradas .form-control{
+    background-color: #333;
+    border: 1px solid #555;
+    color: white;
+}
+
+.compraEntradas .form-control::placeholder{
+    color: #aaa;
+}
+
+.compraEntradas .form-control:focus{
+    background-color: #333;
+    color: white;
+    border-color: #FFD700;
+    box-shadow: 0 0 5px #FFD700;
+}
+
+.compraEntradas .btn-primary{
+    background-color: #FFD700;
+    color: black;
+    border: none;
+    font-weight: bold;
+}
+
+.compraEntradas .btn-primary:hover{
+    background-color: #39dd47;
+    color: black;
+}
+
+/* Ajustes responsive para pantallas pequeñas */
+@media (max-width: 768px){
+    .compraEntradas{
+        width: 95%;
+    }
+}
+
+
+.posterPelicula {
+    display: block;
+    border-radius: 10px;
+    width: 200px;
+    height: 250px;
+}
+
+a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+/* Menú de navegación */
+nav{
+    text-align: center;
+    margin: 25px 0 40px 0;
+    width: 100%;
+}
+
+nav a{
+    color: #FFD700;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+/* Efecto visual al pasar el mouse sobre el menú */
+nav a:hover{
+    color: #39dd47;
+}
+
+
+/* Estilos para tablas de cartelera y registros */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #1a1a1a;
+    color: white;
+    border: 1px solid #444;
+}
+
+th{
+    background-color: #B80F0F;
+    color: white;
+    padding: 15px;
+    border: 1px solid #444;
+    text-align: center;
+}
+
+td{
+    border: 1px solid #444;
+    padding: 12px;
+    text-align: center;
+}
+
+tr{
+    background-color: #1a1a1a;
+}
+
+tr:hover{
+    background-color: #333;
+}
+
+.multimedia iframe{
+    border-radius: 10px;
+    max-width: 100%;
+}
+
+footer{
+    text-align: center;
+    color: #FFD700;
+    margin: 30px 0;
+}
+
+
+.cuerpoTarjeta{
+    background-color: #1a1a1a;
+    padding: 20px;
+}
+
+/* Tarjetas de servicios del cine */
+.contenedorServicios{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.tarjetaServicio{
+    background-color: #1a1a1a;
+    color: #FFD700;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+}
+
+.tarjetaServicio h3{
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.tarjetaServicio p{
+    color: white;
+    font-size: 15px;
+    margin-top: 0;
+}
+
+.crud{
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.crudFormulario{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.crudFormulario input{
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+}
+
+.crudBotones{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.crudBotones button{
+    background-color: #FFD700;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.crudBotones button:hover{
+    background-color: #39dd47;
+}
+
+/* Bloques de código SQL y Java */
+pre{
+    background-color: black;
+    color: #39dd47;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    text-align: left;
+}
+
+/* Imagen del modelo entidad relación */
+.imagen-mer{
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 10px;
+    border: 2px solid #FFD700;
+    margin-top: 20px;
+}
+
+/* Campo de texto largo para formulario de contacto */
+textarea{
+    background-color: #333;
+    border: 1px solid #444;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+/* Tarjetas Bootstrap para películas destacadas */
+.tarjetaPelicula{
+    background-color: #1a1a1a;
+    border: 1px solid #444;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    height: 100%;
+}
+
+.tarjetaPelicula .card-body{
+    background-color: #1a1a1a;
+}
+
+.tarjetaPelicula .tituloTarjeta{
+    color: #FFD700;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.tarjetaPelicula .btn-primary{
+    background-color: #FFD700;
+    color: black;
+    border: none;
+    font-weight: bold;
+}
+
+.tarjetaPelicula .btn-primary:hover{
+    background-color: #39dd47;
+    color: black;
+}
+
+.posterPelicula{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+/* Fotos de integrantes */
+
+/* insertar foto en un marco redondo */
+.fotoIntegrante{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #FFD700;
+    margin-bottom: 20px;
+}

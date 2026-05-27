@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lógica de Programación - CineMaxCESDE</title>
+    <link rel="icon" type="image/png" href="imagenes/cm.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="encabezadoLogo">
+
+        <img src="imagenes/cm.png" alt="Logo CineMax" class="logo-cinemax">
+
+        <div class="textoEncabezado">
+            <h1>Lógica de Programación</h1>
+            <p>Simulación de compra de tickets usando Java y estructuras condicionales.</p>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="crud.html">CRUD</a>
+        <a href="mer.html">MER</a>
+        <a href="logica.html">Lógica</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="integrantes.html">Integrantes</a>
+    </nav>
+
+</header>
+
+<main>
+
+    <section class="crud">
+
+        <h2>Descripción del Ejercicio</h2>
+
+        <p>
+            El sistema permite calcular el valor de una compra de tickets,
+            validar la edad mínima del comprador y aplicar descuentos
+            dependiendo del subtotal de la compra.
+        </p>
+
+    </section>
+
+
+    <section class="crud">
+
+        <h2>Pseudocódigo</h2>
+
+<pre>
+Inicie
+
+Leer nombre
+Leer cantidadTickets
+Leer edad
+
+precioBase = 10000
+clasificacionEdad = "R"
+
+subtotal = cantidadTickets * precioBase
+
+Si subtotal > 50000 Entonces
+    descuento = subtotal * 0.10
+Sino
+    descuento = 0
+FinSi
+
+precioTotalPagado = subtotal - descuento
+
+Si edad >= edadMinima Entonces
+    mensajeCompra = "Compra aprobada"
+Sino
+    mensajeCompra = "Compra rechazada"
+FinSi
+
+Imprimir mensajeCompra
+
+Termine
+</pre>
+
+    </section>
+
+
+    <section class="crud">
+
+        <h2>Fragmento Código Java</h2>
+
+<pre>
+Scanner sc = new Scanner(System.in);
+
+System.out.print("Ingrese nombre: ");
+nombre = sc.nextLine();
+
+subtotal = cantidadTickets * precioBase;
+
+if(subtotal > 50000){
+    descuento = subtotal * 0.10;
+}else{
+    descuento = 0;
+}
+</pre>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>Proyecto Integrador CESDE 2026 - CineMax</p>
+
+</footer>
+
+</body>
+</html>

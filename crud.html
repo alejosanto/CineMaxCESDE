@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - CineMaxCESDE</title>
+    <link rel="icon" type="image/png" href="imagenes/cm.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="encabezadoLogo">
+
+    <img src="imagenes/cm.png" alt="Logo CineMax" class="logo-cinemax">
+
+        <div class="textoEncabezado">
+            <h1>Operaciones CRUD</h1>
+            <p>Gestión básica de películas del sistema CineMax CESDE.</p>
+        </div>
+    </div>
+
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="crud.html">CRUD</a>
+        <a href="mer.html">MER</a>
+        <a href="logica.html">Lógica</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="integrantes.html">Integrantes</a>
+    </nav>
+
+</header>
+
+<main>
+<!-- Formulario para gestión de películas -->
+    <section class="crud">
+
+        <h2>Formulario de Películas</h2>
+
+        <!-- Formulario basado en la tabla tblPeliculas -->
+        <form class="crudFormulario">
+
+            <!-- Formulario basado en la tabla tblPeliculas -->
+            <label for="titulo">Título de la película</label>
+            <input type="text" id="titulo" name="titulo" placeholder="Ej: Avatar 3">
+
+            <label for="duracion">Duración en minutos</label>
+            <input type="number" id="duracion" name="duracion" placeholder="Ej: 181">
+
+            <label for="precio">Precio Base</label>
+            <input type="number" id="precio" name="precio" placeholder="Ej: 15000">
+
+            <label for="clasificacion">Clasificación Edad</label>
+            <input type="text" id="clasificacion" name="clasificacion" placeholder="Ej: PG, R, G">
+
+            <label for="genero">Género</label>
+            <input type="text" id="genero" name="genero" placeholder="Ej: Acción">
+
+
+            <!-- Botones para operaciones CRUD -->
+            <div class="crudBotones">
+
+                <button type="button">Crear</button>
+                <button type="button">Consultar</button>
+                <button type="button">Actualizar</button>
+                <button type="button">Eliminar</button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+<!-- Tabla visual con registros de películas -->
+    <section class="crud">
+
+        <h2>Registros de ejemplo - tblPeliculas</h2>
+
+        <table>
+            <tr>
+                <th>PeliculaId</th>
+                <th>Título</th>
+                <th>Duración</th>
+                <th>Precio Base</th>
+                <th>Clasificación</th>
+                <th>Género</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Avatar 3</td>
+                <td>181</td>
+                <td>15000</td>
+                <td>PG</td>
+                <td>Acción</td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Una Batalla Tras Otra</td>
+                <td>169</td>
+                <td>12000</td>
+                <td>R</td>
+                <td>Acción</td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>El Conjuro</td>
+                <td>112</td>
+                <td>10000</td>
+                <td>R</td>
+                <td>Terror</td>
+            </tr>
+        </table>
+
+    </section>
+
+<!-- Ejemplos de instrucciones SQL -->
+    <section class="crud">
+
+        <h2>Ejemplo de Operaciones SQL</h2>
+
+<pre>
+-- CREATE
+INSERT INTO tblPeliculas
+(Titulo, DuracionMinutos, PrecioBase, ClasificacionEdad, Genero)
+VALUES
+('Avatar 3', 181, 15000, 'PG', 'Acción');
+
+-- READ
+SELECT *
+FROM tblPeliculas;
+
+-- UPDATE
+UPDATE tblPeliculas
+SET PrecioBase = 18000
+WHERE PeliculaId = 1;
+
+-- DELETE
+DELETE FROM tblPeliculas
+WHERE PeliculaId = 3;
+</pre>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>Proyecto Integrador CESDE 2026 - CineMax</p>
+
+</footer>
+
+</body>
+</html>

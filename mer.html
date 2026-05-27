@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MER - CineMaxCESDE</title>
+    <link rel="icon" type="image/png" href="imagenes/cm.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+<header>
+
+    <h1>Base de Datos CineMax CESDE</h1>
+
+    <p>
+        Diseño del modelo entidad-relación y estructura SQL del sistema.
+    </p>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="crud.html">CRUD</a>
+        <a href="mer.html">MER</a>
+        <a href="logica.html">Lógica</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="integrantes.html">Integrantes</a>
+    </nav>
+
+</header>
+
+<main>
+
+    <section class="crud">
+
+        <h2>Modelo Entidad Relación (MER)</h2>
+
+        <img src="imagenes/mer.png" alt="Modelo Entidad Relación CineMax"
+        class="imagen-mer">
+
+    </section>
+
+
+    <section class="crud">
+
+        <h2>Descripción del Modelo</h2>
+
+        <p>
+            El sistema CineMax CESDE permite administrar películas,
+            salas de cine, clientes, funciones y tickets.
+        </p>
+
+        <p>
+            Las tablas se relacionan mediante llaves primarias
+            y llaves foráneas para mantener la integridad de los datos.
+        </p>
+
+    </section>
+
+
+    <section class="crud">
+
+        <h2>Ejemplo Script SQL</h2>
+
+<pre>
+CREATE TABLE tblPeliculas (
+    PeliculaId int primary key identity(1,1),
+    Titulo varchar(100) not null,
+    DuracionMinutos int not null,
+    PrecioBase money not null,
+    ClasificacionEdad char(5) not null,
+    Genero varchar(30) not null
+);
+
+CREATE TABLE tblSalas (
+    SalaId int primary key identity(1,1),
+    NombreSala varchar(30) not null,
+    Capacidad int not null
+);
+</pre>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>Proyecto Integrador CESDE 2026 - CineMax</p>
+
+</footer>
+
+</body>
+</html>
